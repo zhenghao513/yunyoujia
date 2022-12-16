@@ -9,6 +9,12 @@
             <van-cell v-for="item in raw" :title="item" />
           </van-cell-group>
         </div>
+        <div>
+          <div class="title">效果</div>
+          <div class="image">
+            <van-image width="100%" height="100%" :src="query.imageUrl" />
+          </div>
+        </div>
       </VanSpace>
     </div>
   </div>
@@ -32,5 +38,12 @@ const raw = query.desc.substring(3, query.desc.length - 1).split(/[、]/)
 
 .title {
   margin-bottom: 16px;
+}
+
+.image {
+  padding: 0 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

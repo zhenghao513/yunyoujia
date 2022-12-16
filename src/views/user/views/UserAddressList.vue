@@ -8,13 +8,12 @@
         :label="item.tel"
         v-for="item in list"
         :key="item.id"
+        :url="`tel:${item.tel}`"
       />
     </van-cell-group>
-    <van-space align="center" direction="vertical" fill :size="20">
-      <span class="length">
-        {{ list.length + ' 个朋友' }}
-      </span>
-    </van-space>
+    <div class="length">
+      {{ list.length + ' 个朋友' }}
+    </div>
   </div>
 </template>
 
@@ -47,5 +46,9 @@ onMounted(async () => {
 
 .length {
   font-size: var(--van-cell-font-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 </style>

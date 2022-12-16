@@ -1,11 +1,27 @@
 <template>
   <div>
-    <BaseBanner class="filling" />
+    <BaseBanner
+      class="movearea"
+      :style="{
+        backgroundColor:
+          healthCode == '绿码'
+            ? '#92c48d'
+            : healthCode == '黄码'
+            ? '#f7ce00'
+            : '#e84026'
+      }"
+    />
     <div class="filling-form">
       <van-form @submit="onSubmit">
         <van-cell-group inset>
           <van-field :model-value="name" name="name" label="姓名" disabled />
           <van-field :model-value="grade" name="grade" label="班级" disabled />
+          <van-field
+            :model-value="teacher"
+            name="teacher"
+            label="班主任"
+            disabled
+          />
 
           <van-field name="bodyTemperature" label="体温">
             <template #input>
@@ -68,6 +84,7 @@ import BaseBanner from '../../../components/BaseBanner.vue'
 import { useCounterStore } from '../../../store/index'
 const name = ref('李小花')
 const grade = ref('2201')
+const teacher = ref('林婷婷')
 const bodyTemperature = ref('1')
 const cough = ref('1')
 const otherDiscomfort = ref('1')
@@ -92,8 +109,8 @@ const onSubmit = values => {
 </script>
 
 <style scoped>
-.filling {
-  background-color: #92c48d;
+.movearea {
+  transition: 0.5s background-color ease;
 }
 
 .filling-form {
