@@ -1,0 +1,48 @@
+import { createRouter, createWebHashHistory } from 'vue-router'
+import homeRoutes from './home'
+import userRoutes from './user'
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes: [
+    {
+      path: '/',
+      component: () => import('../layouts/BaseLayout.vue'),
+      children: [
+        {
+          path: '/home',
+          name: 'home',
+          meta: { title: '首页' },
+          component: () => import('../views/HomeView.vue')
+        },
+        ...homeRoutes,
+        {
+          path: '/find',
+          name: 'find',
+          meta: { title: '发现' },
+          component: () => import('../views/FindView.vue')
+        },
+        {
+          path: '/message',
+          name: 'message',
+          meta: { title: '消息' },
+          component: () => import('../views/MessageView.vue')
+        },
+        {
+          path: '/user',
+          name: 'user',
+          meta: { title: '我' },
+          component: () => import('../views/UserView.vue')
+        },
+        ...userRoutes,
+        { path: '/', redirect: 'home' }
+      ]
+    }
+  ]
+})
+router.beforeEach((to, from) => {
+  document.title =
+    to.path === '/cookbook-detail' ? to.query.title : to.meta.title
+  return true
+})
+export default router
