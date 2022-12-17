@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 
 export const useCounterStore = defineStore('counter', {
-  state: () => ({ healthReportCount: 0 }),
+  state: () => ({ healthReportCount: 0, isFill: false }),
   getters: {
     getHealthReportCount: state => state.healthReportCount
   },

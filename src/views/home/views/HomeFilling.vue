@@ -11,7 +11,7 @@
             : '#e84026'
       }"
     />
-    <div class="filling-form">
+    <div class="filling-form" v-if="!store.isFill">
       <van-form @submit="onSubmit">
         <van-cell-group inset>
           <van-field :model-value="name" name="name" label="姓名" disabled />
@@ -74,6 +74,13 @@
         </div>
       </van-form>
     </div>
+    <div class="filling-form" v-else>
+      <van-empty
+        image="/smile.svg"
+        image-size="80"
+        description="已完成"
+      />
+    </div>
   </div>
 </template>
 
@@ -102,6 +109,7 @@ const router = useRouter()
 const store = useCounterStore()
 const onSubmit = values => {
   store.healthReportCountIncrement()
+  store.isFill = true
   ci.appContext.config.globalProperties.Toast.success('填报成功')
   router.back()
   console.log(values)
