@@ -12,7 +12,7 @@
         <div>
           <div class="title">效果</div>
           <div class="image">
-            <van-image width="100%" height="100%" :src="query.imageUrl" />
+            <van-image width="50%" height="50%" :src="query.imageUrl" />
           </div>
         </div>
       </VanSpace>

@@ -76,7 +76,8 @@ const homeRoutes = [
     path: '/cookbook-detail',
     name: 'cookbookDetail',
     meta: { title: '每周食谱详情' },
-    component: () => import('../views/home/views/HomeActivitiesCookbookDetail.vue')
+    component: () =>
+      import('../views/home/views/HomeActivitiesCookbookDetail.vue')
   },
   {
     path: '/new-children',
@@ -95,6 +96,12 @@ const homeRoutes = [
     name: 'parents',
     meta: { title: '父母课堂' },
     component: () => import('../views/home/views/HomeServiceParents.vue')
+  },
+  {
+    path: '/leave',
+    name: 'leave',
+    meta: { title: '请假' },
+    component: () => import('../views/home/views/HomeServiceLeave.vue')
   },
   {
     path: '/mailbox',
