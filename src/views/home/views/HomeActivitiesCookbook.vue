@@ -19,12 +19,16 @@
           })
         "
       />
+      <div class="activities-cookbook-backtop" v-if="cookbooks.length != 0">
+        <BaseBackTop />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 import { onMounted, ref } from 'vue'
+import BaseBackTop from '../../../components/BaseBackTop.vue'
 import BaseBanner from '../../../components/BaseBanner.vue'
 import { useFetch } from '../../../utils/fetch'
 const cookbooks = ref([])
@@ -40,5 +44,12 @@ onMounted(async () => {
 <style scoped>
 .activities-cookbook {
   background-color: #e87361;
+}
+
+.activities-cookbook-backtop {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
