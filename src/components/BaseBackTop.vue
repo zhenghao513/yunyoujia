@@ -4,9 +4,9 @@
 
 <script setup>
 function backTop() {
-  const html = document.querySelector('html')
-
-  html.scrollIntoView({
+  scroll({
+    top: 0,
+    left: 0,
     behavior: 'smooth'
   })
 }

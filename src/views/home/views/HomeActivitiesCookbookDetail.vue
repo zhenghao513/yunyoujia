@@ -31,8 +31,11 @@ const query = route.query
 const raw = query.desc.substring(3, query.desc.length - 1).split(/[、]/)
 
 onMounted(() => {
-  const html = document.querySelector('html')
-  html.scrollIntoView()
+  scroll({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  })
 })
 </script>
 
