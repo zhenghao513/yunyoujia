@@ -18,11 +18,11 @@ const tab = ref([
   //   icon: 'guide-o',
   //   to: '/find'
   // },
-  {
-    title: '消息',
-    icon: 'envelop-o',
-    to: '/message'
-  },
+  // {
+  //   title: '消息',
+  //   icon: 'envelop-o',
+  //   to: '/message'
+  // },
   {
     title: '我',
     icon: 'user-o',

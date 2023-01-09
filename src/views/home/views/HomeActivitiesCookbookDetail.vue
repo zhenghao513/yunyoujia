@@ -10,7 +10,7 @@
           </van-cell-group>
         </div>
         <div>
-          <div class="title">效果</div>
+          <!-- <div class="title">效果</div> -->
           <div class="image">
             <van-image width="50%" height="50%" :src="query.imageUrl" />
           </div>
@@ -31,11 +31,7 @@ const query = route.query
 const raw = query.desc.substring(3, query.desc.length - 1).split(/[、]/)
 
 onMounted(() => {
-  scroll({
-    top: 0,
-    left: 0,
-    behavior: 'smooth'
-  })
+  scroll(0, 0)
 })
 </script>
 
