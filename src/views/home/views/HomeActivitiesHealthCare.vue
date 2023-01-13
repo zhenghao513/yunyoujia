@@ -26,6 +26,7 @@ onMounted(async () => {
   const { data } = await useFetch(
     'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/activities-health-care'
   )
+  console.log(data);
   articles.value = data.value.articles
 })
 </script>
