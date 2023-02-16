@@ -5,7 +5,12 @@
       <template v-if="!store.isLeaveApply">
         <van-form @submit="onSubmit">
           <van-cell-group inset>
-            <van-field :model-value="name" name="name" label="姓名" disabled />
+            <van-field
+              :model-value="name"
+              name="name"
+              label="姓名"
+              disabled
+            />
             <van-field
               :model-value="grade"
               name="grade"
@@ -19,9 +24,15 @@
               disabled
             />
             <!-- 开关 -->
-            <van-field name="isHalf" label="半天假">
+            <van-field
+              name="isHalf"
+              label="半天假"
+            >
               <template #input>
-                <van-switch v-model="isHalf" size="20" />
+                <van-switch
+                  v-model="isHalf"
+                  size="20"
+                />
               </template>
             </van-field>
             <!-- 请假时间 -->
@@ -52,7 +63,10 @@
 
             <template v-else>
               <!-- 开始时间 -->
-              <van-popup v-model:show="showleaveDatesPicker" position="bottom">
+              <van-popup
+                v-model:show="showleaveDatesPicker"
+                position="bottom"
+              >
                 <van-datetime-picker
                   v-if="isShow"
                   type="time"
@@ -83,7 +97,10 @@
               @click="showLeaveTypePicker = true"
               :rules="[{ required: true, message: '必填项' }]"
             />
-            <van-popup v-model:show="showLeaveTypePicker" position="bottom">
+            <van-popup
+              v-model:show="showLeaveTypePicker"
+              position="bottom"
+            >
               <van-picker
                 :columns="typeColumns"
                 @confirm="onLeaveTypeConfirm"
@@ -102,7 +119,12 @@
             />
           </van-cell-group>
           <div style="margin: 16px">
-            <van-button round block type="primary" native-type="submit">
+            <van-button
+              round
+              block
+              type="primary"
+              native-type="submit"
+            >
               提交
             </van-button>
           </div>

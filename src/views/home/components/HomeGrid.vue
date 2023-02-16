@@ -1,5 +1,10 @@
 <template>
-  <BaseGrid square :column-num="3" :gutter="10" :gridItems="gridItems" />
+  <BaseGrid
+    square
+    :column-num="3"
+    :gutter="10"
+    :gridItems="gridItems"
+  />
 </template>
 
 <script setup>

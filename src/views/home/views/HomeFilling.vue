@@ -11,11 +11,24 @@
             : '#e84026'
       }"
     />
-    <div class="filling-form" v-if="!store.isFill">
+    <div
+      class="filling-form"
+      v-if="!store.isFill"
+    >
       <van-form @submit="onSubmit">
         <van-cell-group inset>
-          <van-field :model-value="name" name="name" label="姓名" disabled />
-          <van-field :model-value="grade" name="grade" label="班级" disabled />
+          <van-field
+            :model-value="name"
+            name="name"
+            label="姓名"
+            disabled
+          />
+          <van-field
+            :model-value="grade"
+            name="grade"
+            label="班级"
+            disabled
+          />
           <van-field
             :model-value="teacher"
             name="teacher"
@@ -23,27 +36,45 @@
             disabled
           />
 
-          <van-field name="bodyTemperature" label="体温">
+          <van-field
+            name="bodyTemperature"
+            label="体温"
+          >
             <template #input>
-              <van-radio-group v-model="bodyTemperature" direction="horizontal">
+              <van-radio-group
+                v-model="bodyTemperature"
+                direction="horizontal"
+              >
                 <van-radio name="1">正常</van-radio>
                 <van-radio name="0">超出37.3℃</van-radio>
               </van-radio-group>
             </template>
           </van-field>
 
-          <van-field name="cough" label="有无咳嗽">
+          <van-field
+            name="cough"
+            label="有无咳嗽"
+          >
             <template #input>
-              <van-radio-group v-model="cough" direction="horizontal">
+              <van-radio-group
+                v-model="cough"
+                direction="horizontal"
+              >
                 <van-radio name="1">无</van-radio>
                 <van-radio name="0">有</van-radio>
               </van-radio-group>
             </template>
           </van-field>
 
-          <van-field name="otherDiscomfort" label="有无其他不适">
+          <van-field
+            name="otherDiscomfort"
+            label="有无其他不适"
+          >
             <template #input>
-              <van-radio-group v-model="otherDiscomfort" direction="horizontal">
+              <van-radio-group
+                v-model="otherDiscomfort"
+                direction="horizontal"
+              >
                 <van-radio name="1">无</van-radio>
                 <van-radio name="0">有</van-radio>
               </van-radio-group>
@@ -59,7 +90,10 @@
             placeholder="点击选择健康码"
             @click="showPicker = true"
           />
-          <van-popup v-model:show="showPicker" position="bottom">
+          <van-popup
+            v-model:show="showPicker"
+            position="bottom"
+          >
             <van-picker
               :columns="columns"
               @confirm="onConfirm"
@@ -68,13 +102,21 @@
           </van-popup>
         </van-cell-group>
         <div style="margin: 16px">
-          <van-button round block type="primary" native-type="submit">
+          <van-button
+            round
+            block
+            type="primary"
+            native-type="submit"
+          >
             提交
           </van-button>
         </div>
       </van-form>
     </div>
-    <div class="filling-form" v-else>
+    <div
+      class="filling-form"
+      v-else
+    >
       <van-empty
         image="/smile.svg"
         image-size="80"

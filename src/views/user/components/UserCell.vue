@@ -1,5 +1,8 @@
 <template>
-  <BaseCell is-link :cell="userCell" />
+  <BaseCell
+    is-link
+    :cell="userCell"
+  />
 </template>
 
 <script setup>

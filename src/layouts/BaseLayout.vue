@@ -1,8 +1,15 @@
 <template>
-  <NavBar :left-arrow="isSubpage" :title="title" v-if="!isWeChat" />
+  <NavBar
+    :left-arrow="isSubpage"
+    :title="title"
+    v-if="!isWeChat"
+  />
   <RouterView :class="{ content: true, wechat: isWeChat }" />
   <transition name="van-slide-up">
-    <TabBar :tab="tab" v-show="!isSubpage" />
+    <TabBar
+      :tab="tab"
+      v-show="!isSubpage"
+    />
   </transition>
 </template>
 

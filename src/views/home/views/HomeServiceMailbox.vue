@@ -15,7 +15,12 @@
         />
       </van-cell-group>
       <div style="margin: 16px">
-        <van-button round block type="primary" @click="onSubmit">
+        <van-button
+          round
+          block
+          type="primary"
+          @click="onSubmit"
+        >
           提交
         </van-button>
       </div>

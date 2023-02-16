@@ -1,5 +1,10 @@
 <template>
-  <van-grid :border="border" :square="square" :column-num="columnNum" :gutter="gutter">
+  <van-grid
+    :border="border"
+    :square="square"
+    :column-num="columnNum"
+    :gutter="gutter"
+  >
     <van-grid-item
       v-for="(item, index) in gridItems"
       :key="index"
@@ -16,7 +21,7 @@ const props = defineProps({
   square: Boolean,
   gutter: Number,
   gridItems: Array,
-  border:Boolean
+  border: Boolean
 })
 </script>
 

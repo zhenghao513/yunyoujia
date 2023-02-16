@@ -1,6 +1,9 @@
 <template>
   <div>
-    <van-space fill direction="vertical">
+    <van-space
+      fill
+      direction="vertical"
+    >
       <UserCard />
       <UserCell />
     </van-space>

@@ -2,10 +2,17 @@
   <div>
     <BaseBanner class="user-contact" />
     <div class="contact-cell">
-      <BaseCell inset :cell="contactInfo" />
+      <BaseCell
+        inset
+        :cell="contactInfo"
+      />
     </div>
     <div class="user-main">
-      <VanSpace fill direction="vertical" :size="32">
+      <VanSpace
+        fill
+        direction="vertical"
+        :size="32"
+      >
         <div>
           <div class="title">办学宗旨和教学理念</div>
           <van-cell-group inset>
@@ -17,7 +24,11 @@
         <div>
           <div class="title">学校荣誉</div>
           <div class="image">
-            <img src="/certificate.svg" alt="" srcset="" />
+            <img
+              src="/certificate.svg"
+              alt=""
+              srcset=""
+            />
           </div>
         </div>
 

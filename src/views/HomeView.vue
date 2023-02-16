@@ -1,7 +1,14 @@
 <template>
   <div>
-    <van-notice-bar left-icon="volume-o" scrollable :text="noticeText" />
-    <van-space direction="vertical" fill>
+    <van-notice-bar
+      left-icon="volume-o"
+      scrollable
+      :text="noticeText"
+    />
+    <van-space
+      direction="vertical"
+      fill
+    >
       <HomeSwipe />
       <HomeGrid />
     </van-space>

@@ -19,7 +19,10 @@
           })
         "
       />
-      <div class="activities-cookbook-backtop" v-if="cookbooks.length != 0">
+      <div
+        class="activities-cookbook-backtop"
+        v-if="cookbooks.length != 0"
+      >
         <BaseBackTop />
       </div>
     </div>

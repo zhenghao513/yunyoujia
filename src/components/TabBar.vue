@@ -1,5 +1,8 @@
 <template>
-  <van-tabbar v-model="active" route>
+  <van-tabbar
+    v-model="active"
+    route
+  >
     <van-tabbar-item
       v-for="(item, index) in tab"
       :to="item.to"

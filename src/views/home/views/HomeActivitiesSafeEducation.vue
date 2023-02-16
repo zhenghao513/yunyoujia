@@ -2,12 +2,19 @@
   <div>
     <BaseBanner class="activities-safe-education" />
     <div class="main">
-      <VanSpace fill direction="vertical" :size="32">
+      <VanSpace
+        fill
+        direction="vertical"
+        :size="32"
+      >
         <template v-for="article in articles">
           <div>
             <div class="title">{{ article.title }}</div>
             <van-cell-group inset>
-              <van-cell v-for="item in article.paragraph" :title="item" />
+              <van-cell
+                v-for="item in article.paragraph"
+                :title="item"
+              />
             </van-cell-group>
           </div>
         </template>

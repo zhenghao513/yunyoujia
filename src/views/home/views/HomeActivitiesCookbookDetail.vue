@@ -2,17 +2,28 @@
   <div>
     <BaseBanner class="activities-cookbook-detail" />
     <div class="main">
-      <VanSpace fill direction="vertical" :size="32">
+      <VanSpace
+        fill
+        direction="vertical"
+        :size="32"
+      >
         <div>
           <div class="title">原料</div>
           <van-cell-group inset>
-            <van-cell v-for="item in raw" :title="item" />
+            <van-cell
+              v-for="item in raw"
+              :title="item"
+            />
           </van-cell-group>
         </div>
         <div>
           <!-- <div class="title">效果</div> -->
           <div class="image">
-            <van-image width="50%" height="50%" :src="query.imageUrl" />
+            <van-image
+              width="50%"
+              height="50%"
+              :src="query.imageUrl"
+            />
           </div>
         </div>
       </VanSpace>

@@ -1,6 +1,10 @@
 <template>
   <div class="main">
-    <van-space direction="vertical" fill :size="20">
+    <van-space
+      direction="vertical"
+      fill
+      :size="20"
+    >
       <van-button
         type="primary"
         block

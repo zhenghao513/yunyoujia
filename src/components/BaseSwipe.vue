@@ -1,6 +1,13 @@
 <template>
-  <van-swipe class="my-swipe" :autoplay="autoplay" indicator-color="white">
-    <van-swipe-item v-for="(item, index) in items" :key="index">
+  <van-swipe
+    class="my-swipe"
+    :autoplay="autoplay"
+    indicator-color="white"
+  >
+    <van-swipe-item
+      v-for="(item, index) in items"
+      :key="index"
+    >
       {{ item }}
     </van-swipe-item>
   </van-swipe>

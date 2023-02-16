@@ -1,5 +1,10 @@
 <template>
-  <van-button round type="success" @click="backTop">返回顶部</van-button>
+  <van-button
+    round
+    type="success"
+    @click="backTop"
+    >返回顶部</van-button
+  >
 </template>
 
 <script setup>
