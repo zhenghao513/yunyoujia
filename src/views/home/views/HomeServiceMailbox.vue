@@ -30,13 +30,13 @@
 
 <script setup>
 import BaseBanner from '../../../components/BaseBanner.vue'
-
+import { useCounterStore } from '../../../store/index'
 const message = ref('')
-
+const store = useCounterStore()
 const ci = getCurrentInstance()
 
 const onSubmit = function () {
-  console.log(message.value)
+  store.mailboxCountIncrement()
   ci.appContext.config.globalProperties.Toast.success('提交成功')
   message.value = ''
 }

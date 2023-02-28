@@ -202,6 +202,7 @@ const store = useCounterStore()
 const onSubmit = values => {
   ci.appContext.config.globalProperties.Toast.success('提交成功')
   store.isLeaveApply = true
+  store.leaveCountIncrement()
   router.back()
   console.log(values)
 }
