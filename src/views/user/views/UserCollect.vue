@@ -21,6 +21,20 @@
             <span>园长信箱</span>
           </div>
         </div>
+
+        <div>
+          <van-cell-group inset>
+            <van-cell
+              title="请假记录"
+              is-link
+              :to="{ name: 'leaveRecord' }"
+            />
+            <van-cell
+              title="已发送"
+              is-link
+            />
+          </van-cell-group>
+        </div>
       </VanSpace>
     </div>
   </div>

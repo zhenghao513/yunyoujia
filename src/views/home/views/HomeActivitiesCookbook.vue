@@ -55,6 +55,12 @@ onMounted(async () => {
     isLoading.value = false
   }, 300)
   cookbooks.value = data.value.cookbookList
+
+  scrollTo({
+    left: 0,
+    top: 0,
+    behavior: 'smooth'
+  })
 })
 </script>
 

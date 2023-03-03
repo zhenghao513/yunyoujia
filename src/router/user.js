@@ -12,6 +12,12 @@ const userRoutes = [
     component: () => import('../views/user/views/UserCollect.vue')
   },
   {
+    path: '/leave-record',
+    name: 'leaveRecord',
+    meta: { title: '请假记录' },
+    component: () => import('../views/user/views/UserCollectLeaveRecords.vue')
+  },
+  {
     path: '/contact',
     name: 'contact',
     meta: { title: '联系我们' },
