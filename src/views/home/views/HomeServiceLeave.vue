@@ -146,6 +146,7 @@ import BaseBanner from '../../../components/BaseBanner.vue'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useCounterStore } from '../../../store/index'
+import { useLeaveStore } from '../../../store/useLeaveStore'
 
 const name = ref('李小花')
 const grade = ref('2201')
@@ -188,7 +189,6 @@ const onLeaveDatesConfirm = values => {
 const leaveType = ref('')
 const showLeaveTypePicker = ref(false)
 const typeColumns = ['病假', '事假', '其他', '公假']
-
 const onLeaveTypeConfirm = value => {
   leaveType.value = value
   showLeaveTypePicker.value = false
@@ -204,7 +204,12 @@ const onSubmit = values => {
   store.isLeaveApply = true
   store.leaveCountIncrement()
   router.back()
+  Object.assign(values, {
+    submitTime: new Date().toLocaleString('zh', { dateStyle: 'medium' })
+  })
   console.log(values)
+  const leaveStore = useLeaveStore()
+  leaveStore.addLeaveRecord(values)
 }
 </script>
 
