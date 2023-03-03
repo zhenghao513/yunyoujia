@@ -1,7 +1,18 @@
 <template>
-  <div>
+  <div :class="{ 'box-load': isLoading, box: !isLoading }">
     <BaseBanner class="activities-cookbook" />
-    <div class="main">
+
+    <div
+      class="container-loading"
+      v-if="isLoading"
+    >
+      <van-loading color="#1989fa" />
+    </div>
+
+    <div
+      class="main"
+      v-else
+    >
       <van-card
         v-for="item in cookbooks"
         :key="item.id"
@@ -35,11 +46,14 @@ import BaseBackTop from '../../../components/BaseBackTop.vue'
 import BaseBanner from '../../../components/BaseBanner.vue'
 import { useFetch } from '../../../utils/fetch'
 const cookbooks = ref([])
-
+const isLoading = ref(true)
 onMounted(async () => {
   const { data } = await useFetch(
     'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/cookbook'
   )
+  setTimeout(() => {
+    isLoading.value = false
+  }, 300)
   cookbooks.value = data.value.cookbookList
 })
 </script>

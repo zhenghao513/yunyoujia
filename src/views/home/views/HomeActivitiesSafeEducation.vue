@@ -1,7 +1,18 @@
 <template>
-  <div>
+  <div :class="{ 'box-load': isLoading, box: !isLoading }">
     <BaseBanner class="activities-safe-education" />
-    <div class="main">
+
+    <div
+      class="container-loading"
+      v-if="isLoading"
+    >
+      <van-loading color="#1989fa" />
+    </div>
+
+    <div
+      class="main"
+      v-else
+    >
       <VanSpace
         fill
         direction="vertical"
@@ -29,10 +40,15 @@ import BaseBanner from '../../../components/BaseBanner.vue'
 import { useFetch } from '../../../utils/fetch'
 
 const articles = ref([])
+const isLoading = ref(true)
+
 onMounted(async () => {
   const { data } = await useFetch(
     'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/activities-safe-education'
   )
+  setTimeout(() => {
+    isLoading.value = false
+  }, 300)
   articles.value = data.value.articles
 })
 </script>
