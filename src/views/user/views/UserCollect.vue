@@ -45,7 +45,9 @@ import BaseBanner from '../../../components/BaseBanner.vue'
 import { ref, reactive, watch } from 'vue'
 import gsap from 'gsap'
 import { useCounterStore } from '../../../store/index'
+import { useLeaveStore } from '../../../store/useLeaveStore'
 const store = useCounterStore()
+const leaveStore = useLeaveStore()
 
 const filling = ref(0)
 const leave = ref(0)
@@ -59,7 +61,7 @@ const tweened = reactive({
 
 setTimeout(() => {
   filling.value = store.getHealthReportCount + new Date().getDate() - 1
-  leave.value = store.getLeaveCount + 2
+  leave.value = leaveStore.getLeaveRecord.length
   mailbox.value = store.getmailboxCount + 3
 }, 300)
 watch(filling, n => {
