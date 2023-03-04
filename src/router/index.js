@@ -7,6 +7,16 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      redirect: '/auth'
+    },
+    {
+      path: '/auth',
+      component: () => import('../views/auth/AuthView.vue'),
+      name: 'auth',
+      meta: { title: '登录' }
+    },
+    {
+      path: '/index',
       component: () => import('../layouts/BaseLayout.vue'),
       children: [
         {
@@ -35,7 +45,7 @@ const router = createRouter({
           component: () => import('../views/UserView.vue')
         },
         ...userRoutes,
-        { path: '/', redirect: 'home' }
+        { path: '/index', redirect: 'home' }
       ]
     }
   ]
