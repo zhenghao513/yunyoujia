@@ -5,9 +5,17 @@
       <van-cell-group inset>
         <van-cell
           is-link
-          :title="item.leaveType"
+          :title="item.leaveReason"
           :value="item.submitTime"
           v-for="item in store.getLeaveRecord"
+          @click="
+            $router.push({
+              name: 'leaveRecordDetail',
+              query: {
+                currentInfo: JSON.stringify(item)
+              }
+            })
+          "
         />
       </van-cell-group>
     </div>

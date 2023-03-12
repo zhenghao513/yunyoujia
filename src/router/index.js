@@ -51,8 +51,14 @@ const router = createRouter({
   ]
 })
 router.beforeEach((to, from) => {
-  document.title =
-    to.path === '/cookbook-detail' ? to.query.title : to.meta.title
+  if (to.path === '/cookbook-detail') {
+    document.title = to.query.title
+  } else if (to.path === '/leave-record-detail') {
+    document.title = JSON.parse(to.query.currentInfo).leaveType
+  } else {
+    document.title = to.meta.title
+  }
   return true
 })
+
 export default router
