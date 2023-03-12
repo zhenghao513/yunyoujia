@@ -37,6 +37,7 @@ const route = useRoute()
 const router = useRouter()
 const info = JSON.parse(route.query.currentInfo)
 info.isHalf = info.isHalf === false ? '否' : '是'
+info.submitTime = new Date(Number.parseInt(info.submitTime)).toLocaleDateString()
 const currentInfo = ref(info)
 const title = [
   '姓名',

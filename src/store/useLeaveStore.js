@@ -11,7 +11,7 @@ export const useLeaveStore = defineStore('leave', {
         leaveDates: '3/1 - 3/2',
         leaveType: '公假',
         leaveReason: '参加歌唱比赛',
-        submitTime: '2023年3月1日'
+        submitTime: '1678221156662'
       },
       {
         name: '李小花',
@@ -21,7 +21,7 @@ export const useLeaveStore = defineStore('leave', {
         leaveDates: '3/2 - 3/3',
         leaveType: '病假',
         leaveReason: '生病了',
-        submitTime: '2023年3月2日'
+        submitTime: '1671235656662'
       },
       {
         name: '李小花',
@@ -31,7 +31,7 @@ export const useLeaveStore = defineStore('leave', {
         leaveDates: '3/3 - 3/4',
         leaveType: '事假',
         leaveReason: '去办理业务',
-        submitTime: '2023年3月3日'
+        submitTime: '1678551122662'
       }
     ]
   }),

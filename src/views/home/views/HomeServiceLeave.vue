@@ -205,7 +205,7 @@ const onSubmit = values => {
   store.leaveCountIncrement()
   router.back()
   Object.assign(values, {
-    submitTime: new Date().toLocaleString('zh', { dateStyle: 'medium' })
+    submitTime: Date.now()
   })
   console.log(values)
   const leaveStore = useLeaveStore()

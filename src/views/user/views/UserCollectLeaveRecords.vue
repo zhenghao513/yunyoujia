@@ -6,8 +6,10 @@
         <van-cell
           is-link
           :title="item.leaveReason"
-          :value="item.submitTime"
-          v-for="(item, index) in store.getLeaveRecord"
+          :value="
+            new Date(Number.parseInt(item.submitTime)).toLocaleDateString()
+          "
+          v-for="(item, index) in list"
           @click="
             $router.push({
               name: 'leaveRecordDetail',
@@ -26,7 +28,11 @@
 <script setup>
 import BaseBanner from '../../../components/BaseBanner.vue'
 import { useLeaveStore } from '../../../store/useLeaveStore'
+import { computed } from 'vue'
 const store = useLeaveStore()
+const list = computed(() => {
+  return store.getLeaveRecord.sort((a, b) => b.submitTime - a.submitTime)
+})
 </script>
 
 <style scoped>
