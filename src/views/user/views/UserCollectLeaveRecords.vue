@@ -7,12 +7,13 @@
           is-link
           :title="item.leaveReason"
           :value="item.submitTime"
-          v-for="item in store.getLeaveRecord"
+          v-for="(item, index) in store.getLeaveRecord"
           @click="
             $router.push({
               name: 'leaveRecordDetail',
               query: {
-                currentInfo: JSON.stringify(item)
+                currentInfo: JSON.stringify(item),
+                index
               }
             })
           "
