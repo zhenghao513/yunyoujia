@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <div class="logo">
-        <img src="../../../public/logo.jpg" />
+        <img src="/yunyoujia/logo.jpg" />
         <span>云幼家</span>
       </div>
 
