@@ -3,7 +3,7 @@ import homeRoutes from './home'
 import userRoutes from './user'
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory('/yunyoujia/'),
   routes: [
     {
       path: '/',
