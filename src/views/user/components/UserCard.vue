@@ -12,7 +12,7 @@
 const userInfo = ref({
   desc: '全面 不止一面',
   title: '李小花',
-  thumb: '../../../../public/logo.jpg'
+  thumb: 'https://fastly.jsdelivr.net/npm/@vant/assets/cat.jpeg'
 })
 
 const themeVars = ref({
