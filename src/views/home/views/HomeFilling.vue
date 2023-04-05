@@ -118,7 +118,7 @@
       v-else
     >
       <van-empty
-        image="/yunyoujia/smile.svg"
+        image="/smile.svg"
         image-size="80"
         description="已完成"
       />

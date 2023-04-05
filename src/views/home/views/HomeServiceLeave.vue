@@ -132,7 +132,7 @@
       </template>
       <template v-else>
         <van-empty
-          image="/yunyoujia/smile.svg"
+          image="/smile.svg"
           image-size="80"
           description="当前已存在请假申请，请销假后再来"
         />

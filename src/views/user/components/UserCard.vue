@@ -12,7 +12,7 @@
 const userInfo = ref({
   desc: '全面 不止一面',
   title: '李小花',
-  thumb: '/yunyoujia/avatar.jpg'
+  thumb: '/avatar.jpg'
 })
 
 const themeVars = ref({
