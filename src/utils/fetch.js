@@ -6,9 +6,9 @@ export async function useFetch(url) {
   const error = ref(null)
 
   await fetch(url)
-    .then(res => res.json())
-    .then(json => (data.value = json))
-    .catch(err => (error.value = err))
+    .then((res) => res.json())
+    .then((json) => (data.value = json))
+    .catch((err) => (error.value = err))
 
   return { data, error }
 }

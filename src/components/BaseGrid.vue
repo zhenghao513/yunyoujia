@@ -21,7 +21,7 @@ const props = defineProps({
   square: Boolean,
   gutter: Number,
   gridItems: Array,
-  border: Boolean
+  border: Boolean,
 })
 </script>
 

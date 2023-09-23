@@ -13,18 +13,18 @@ const items = ref([
   {
     text: '园区介绍',
     to: '/introduce',
-    color: '#8981f7'
+    color: '#8981f7',
   },
   {
     text: '室内环境',
     to: '/indoor',
-    color: '#8981f7'
+    color: '#8981f7',
   },
   {
     text: '室外环境',
     to: '/outdoor',
-    color: '#8981f7'
-  }
+    color: '#8981f7',
+  },
 ])
 </script>
 <style scoped>

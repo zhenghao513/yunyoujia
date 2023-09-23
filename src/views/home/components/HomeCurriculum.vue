@@ -19,7 +19,7 @@ const curriculum = ref([])
 
 onMounted(async () => {
   const { data } = await useFetch(
-    'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/curriculum'
+    'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/curriculum',
   )
 
   curriculum.value = data.value.curriculum

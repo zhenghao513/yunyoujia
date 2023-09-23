@@ -17,11 +17,11 @@ const props = defineProps({
   cell: Array,
   inset: {
     type: Boolean,
-    default: false
+    default: false,
   },
   isLink: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 })
 </script>

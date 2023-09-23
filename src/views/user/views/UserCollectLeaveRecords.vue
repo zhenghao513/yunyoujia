@@ -15,8 +15,8 @@
               name: 'leaveRecordDetail',
               query: {
                 currentInfo: JSON.stringify(item),
-                index
-              }
+                index,
+              },
             })
           "
         />

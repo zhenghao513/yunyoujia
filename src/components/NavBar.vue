@@ -10,7 +10,7 @@
 <script setup>
 const props = defineProps({
   title: String,
-  leftArrow: Boolean
+  leftArrow: Boolean,
 })
 
 const onClickLeft = () => history.back()

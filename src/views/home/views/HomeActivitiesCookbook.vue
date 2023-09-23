@@ -25,8 +25,8 @@
             query: {
               title: item.title,
               desc: item.desc,
-              imageUrl: item.imageUrl
-            }
+              imageUrl: item.imageUrl,
+            },
           })
         "
       />
@@ -49,7 +49,7 @@ const cookbooks = ref([])
 const isLoading = ref(true)
 onMounted(async () => {
   const { data } = await useFetch(
-    'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/cookbook'
+    'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/cookbook',
   )
   setTimeout(() => {
     isLoading.value = false
@@ -59,7 +59,7 @@ onMounted(async () => {
   scrollTo({
     left: 0,
     top: 0,
-    behavior: 'smooth'
+    behavior: 'smooth',
   })
 })
 </script>

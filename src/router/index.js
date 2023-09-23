@@ -7,13 +7,13 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/auth'
+      redirect: '/auth',
     },
     {
       path: '/auth',
       component: () => import('../views/auth/AuthView.vue'),
       name: 'auth',
-      meta: { title: '登录' }
+      meta: { title: '登录' },
     },
     {
       path: '/index',
@@ -23,32 +23,32 @@ const router = createRouter({
           path: '/home',
           name: 'home',
           meta: { title: '首页' },
-          component: () => import('../views/HomeView.vue')
+          component: () => import('../views/HomeView.vue'),
         },
         ...homeRoutes,
         {
           path: '/find',
           name: 'find',
           meta: { title: '发现' },
-          component: () => import('../views/FindView.vue')
+          component: () => import('../views/FindView.vue'),
         },
         {
           path: '/message',
           name: 'message',
           meta: { title: '消息' },
-          component: () => import('../views/MessageView.vue')
+          component: () => import('../views/MessageView.vue'),
         },
         {
           path: '/user',
           name: 'user',
           meta: { title: '我' },
-          component: () => import('../views/UserView.vue')
+          component: () => import('../views/UserView.vue'),
         },
         ...userRoutes,
-        { path: '/index', redirect: 'home' }
-      ]
-    }
-  ]
+        { path: '/index', redirect: 'home' },
+      ],
+    },
+  ],
 })
 router.beforeEach((to, from) => {
   if (to.path === '/cookbook-detail') {

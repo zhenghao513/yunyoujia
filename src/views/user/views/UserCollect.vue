@@ -56,7 +56,7 @@ const mailbox = ref(0)
 const tweened = reactive({
   filling: 0,
   leave: 0,
-  mailbox: 0
+  mailbox: 0,
 })
 
 setTimeout(() => {
@@ -64,13 +64,13 @@ setTimeout(() => {
   leave.value = leaveStore.getLeaveRecord.length
   mailbox.value = store.getmailboxCount + 3
 }, 300)
-watch(filling, n => {
+watch(filling, (n) => {
   gsap.to(tweened, { duration: 0.5, filling: Number(n) || 0 })
 })
-watch(leave, n => {
+watch(leave, (n) => {
   gsap.to(tweened, { duration: 0.5, leave: Number(n) || 0 })
 })
-watch(mailbox, n => {
+watch(mailbox, (n) => {
   gsap.to(tweened, { duration: 0.5, mailbox: Number(n) || 0 })
 })
 </script>

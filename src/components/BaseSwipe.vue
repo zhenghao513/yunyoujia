@@ -17,12 +17,12 @@
 const props = defineProps({
   items: {
     type: Array,
-    default: ['1', '2', '3', '4']
+    default: ['1', '2', '3', '4'],
   },
   autoplay: {
     typeof: Number,
-    default: 3000
-  }
+    default: 3000,
+  },
 })
 </script>
 

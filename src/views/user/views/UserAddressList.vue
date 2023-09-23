@@ -40,12 +40,12 @@ const list = ref([])
 const chosenContactId = ref('1')
 
 const onAdd = () => showToast('新增')
-const onEdit = contact => showToast('编辑' + contact.id)
-const onSelect = contact => showToast('选择' + contact.id)
+const onEdit = (contact) => showToast('编辑' + contact.id)
+const onSelect = (contact) => showToast('选择' + contact.id)
 const isLoading = ref(true)
 onMounted(async () => {
   const { data } = await useFetch(
-    'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/address_list'
+    'https://mock.presstime.cn/mock/6386cc6ee7aea00081e027fd/yunyoujia/address_list',
   )
   list.value = data.value.addressList
   setTimeout(() => {

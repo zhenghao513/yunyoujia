@@ -48,8 +48,8 @@
                 { required: true, message: '必填项' },
                 {
                   validator: validatorMessage,
-                  message: '结束时间必须大于开始时间'
-                }
+                  message: '结束时间必须大于开始时间',
+                },
               ]"
               @click="showleaveDatesPicker = true"
             />
@@ -156,11 +156,11 @@ const isHalf = ref(false)
 const leaveDates = ref('')
 const showleaveDatesPicker = ref(false)
 const isShow = ref(true)
-const formatDate = date => `${date.getMonth() + 1}/${date.getDate()}`
+const formatDate = (date) => `${date.getMonth() + 1}/${date.getDate()}`
 
 const startTime = ref('')
 
-const validatorMessage = val => {
+const validatorMessage = (val) => {
   if (isHalf.value) {
     const [h1, m1, opt, h2, m2] = val.split(/[ . || - ||\/||:]/)
     const left = h1 * 60 + m1
@@ -168,7 +168,7 @@ const validatorMessage = val => {
     return left < right
   }
 }
-const onLeaveDatesConfirm = values => {
+const onLeaveDatesConfirm = (values) => {
   if (isHalf.value) {
     if (isShow.value) {
       startTime.value = values
@@ -189,7 +189,7 @@ const onLeaveDatesConfirm = values => {
 const leaveType = ref('')
 const showLeaveTypePicker = ref(false)
 const typeColumns = ['病假', '事假', '其他', '公假']
-const onLeaveTypeConfirm = value => {
+const onLeaveTypeConfirm = (value) => {
   leaveType.value = value
   showLeaveTypePicker.value = false
 }
@@ -199,13 +199,13 @@ const leaveReason = ref('')
 const ci = getCurrentInstance()
 const router = useRouter()
 const store = useCounterStore()
-const onSubmit = values => {
+const onSubmit = (values) => {
   ci.appContext.config.globalProperties.Toast.success('提交成功')
   store.isLeaveApply = true
   store.leaveCountIncrement()
   router.back()
   Object.assign(values, {
-    submitTime: Date.now()
+    submitTime: Date.now(),
   })
   console.log(values)
   const leaveStore = useLeaveStore()

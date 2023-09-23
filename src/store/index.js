@@ -6,12 +6,12 @@ export const useCounterStore = defineStore('counter', {
     isFill: false,
     isLeaveApply: false,
     leaveCount: 0,
-    mailboxCount: 0
+    mailboxCount: 0,
   }),
   getters: {
-    getHealthReportCount: state => state.healthReportCount,
-    getLeaveCount: state => state.leaveCount,
-    getmailboxCount: state => state.mailboxCount
+    getHealthReportCount: (state) => state.healthReportCount,
+    getLeaveCount: (state) => state.leaveCount,
+    getmailboxCount: (state) => state.mailboxCount,
   },
   actions: {
     healthReportCountIncrement() {
@@ -22,6 +22,6 @@ export const useCounterStore = defineStore('counter', {
     },
     mailboxCountIncrement() {
       this.mailboxCount++
-    }
-  }
+    },
+  },
 })

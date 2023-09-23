@@ -18,13 +18,13 @@ const items = ref([
   {
     text: '请假',
     to: '/leave',
-    color: '#bddb69'
+    color: '#bddb69',
   },
   {
     text: '园长信箱',
     to: '/mailbox',
-    color: '#bddb69'
-  }
+    color: '#bddb69',
+  },
 ])
 </script>
 

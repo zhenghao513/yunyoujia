@@ -8,7 +8,7 @@
             ? '#92c48d'
             : healthCode == '黄码'
             ? '#f7ce00'
-            : '#e84026'
+            : '#e84026',
       }"
     />
     <div
@@ -142,14 +142,14 @@ const healthCode = ref('绿码')
 const showPicker = ref(false)
 const columns = ['绿码', '黄码', '红码']
 
-const onConfirm = value => {
+const onConfirm = (value) => {
   healthCode.value = value
   showPicker.value = false
 }
 const ci = getCurrentInstance()
 const router = useRouter()
 const store = useCounterStore()
-const onSubmit = values => {
+const onSubmit = (values) => {
   store.healthReportCountIncrement()
   store.isFill = true
   ci.appContext.config.globalProperties.Toast.success('填报成功')

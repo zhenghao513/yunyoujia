@@ -20,8 +20,9 @@
           <van-button
             type="danger"
             @click="deleteRecord($route.query.index)"
-            >撤销申请</van-button
           >
+            撤销申请
+          </van-button>
         </div>
       </VanSpace>
     </div>
@@ -37,7 +38,9 @@ const route = useRoute()
 const router = useRouter()
 const info = JSON.parse(route.query.currentInfo)
 info.isHalf = info.isHalf === false ? '否' : '是'
-info.submitTime = new Date(Number.parseInt(info.submitTime)).toLocaleDateString()
+info.submitTime = new Date(
+  Number.parseInt(info.submitTime),
+).toLocaleDateString()
 const currentInfo = ref(info)
 const title = [
   '姓名',
@@ -47,7 +50,7 @@ const title = [
   '请假时间',
   '请假类型',
   '请假事由',
-  '提交时间'
+  '提交时间',
 ]
 const store = useLeaveStore()
 function deleteRecord(index) {

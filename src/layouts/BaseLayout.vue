@@ -18,7 +18,7 @@ const tab = ref([
   {
     title: '首页',
     icon: 'home-o',
-    to: '/home'
+    to: '/home',
   },
   // {
   //   title: '发现',
@@ -33,8 +33,8 @@ const tab = ref([
   {
     title: '我',
     icon: 'user-o',
-    to: '/user'
-  }
+    to: '/user',
+  },
 ])
 
 const route = useRoute()

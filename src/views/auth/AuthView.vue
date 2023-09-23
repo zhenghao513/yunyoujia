@@ -45,8 +45,8 @@ import { useRouter } from 'vue-router'
 const router = useRouter()
 const username = ref('')
 const password = ref('')
-const onSubmit = values => {
-  console.log(values);
+const onSubmit = (values) => {
+  console.log(values)
   if (values.username === 'admin' && values.password === 'admin') {
     router.replace('/index')
   }

@@ -9,10 +9,10 @@ export default defineConfig({
     vue(),
     AutoImport({
       imports: ['vue', 'vue-router'],
-      dts: true
+      dts: true,
     }),
     Components({
-      resolvers: [VantResolver()]
-    })
-  ]
+      resolvers: [VantResolver()],
+    }),
+  ],
 })
