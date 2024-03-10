@@ -6,7 +6,7 @@ export const useCounterStore = defineStore('counter', {
     isFill: false,
     isLeaveApply: false,
     leaveCount: 0,
-    mailboxCount: 0,
+    mailboxCount: 0
   }),
   getters: {
     getHealthReportCount: (state) => state.healthReportCount,
